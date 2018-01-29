@@ -25,6 +25,7 @@ class ListActorDataController {
     private var actors: [Actor] = []
     
     init(delegate: ListActorDataControllerDelegate) {
+        
         ActorsRequest().getPeople { (actors, error) in
             
             if let error = error {
