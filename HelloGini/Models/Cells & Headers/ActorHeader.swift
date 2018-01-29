@@ -32,7 +32,7 @@ class ActorHeader: UITableViewHeaderFooterView {
             heightLabel.text = section.actor.height
             
             isCollapse = section.isCollapse
-            portraitImageView.image = UIImage(named: section.actor.name ?? "") ?? #imageLiteral(resourceName: "noImage")
+            portraitImageView.image = UIImage(named: section.actor.name) ?? #imageLiteral(resourceName: "noImage")
         }
     }
     

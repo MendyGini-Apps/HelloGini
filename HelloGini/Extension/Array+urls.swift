@@ -10,7 +10,7 @@ import Foundation
 
 extension Array where Element == String {
 
-    var urls: [URL]? {
+    var urls: [URL] {
         var urls = [URL]()
         
         self.forEach{

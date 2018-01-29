@@ -19,6 +19,9 @@ protocol ListActorTableControllerViewSource {
     func didSelectFilm(_ film: Film)
 }
 
+protocol ListActorTableControllerProtocol: TableControllerProtocol {
+    func refresh(section: Int, withFilm film: Film)
+}
 
 class ListActorTableController: NSObject {
     
@@ -42,7 +45,7 @@ class ListActorTableController: NSObject {
 }
 
 // MARK: - TableControllerProtocol
-extension ListActorTableController: TableControllerProtocol {
+extension ListActorTableController: ListActorTableControllerProtocol {
     func registerReuseIndentifier(_ identifier: String) {
         let tableView = viewSource.tableView
         tableView.register(FilmTableViewCell.nib, forCellReuseIdentifier: identifier)
@@ -59,6 +62,16 @@ extension ListActorTableController: TableControllerProtocol {
         actorHeader = data.items.sections
         viewSource.tableView.reloadData()
     }
+    
+    func refresh(section: Int, withFilm film: Film) {
+        guard let index = actorHeader[section].actor.insert(film: film, at: nil) else { return }
+        let indexPath = IndexPath(row: index, section: section)
+        if viewSource.tableView.indexPathsForVisibleRows?.contains(indexPath) == true {
+            viewSource.tableView.beginUpdates()
+            viewSource.tableView.reloadRows(at: [indexPath], with: .none)
+            viewSource.tableView.endUpdates()
+        }
+    }
 }
 
 // MARK: - UITableViewDataSource
@@ -72,12 +85,12 @@ extension ListActorTableController: UITableViewDataSource {
         if actorHeader[section].isCollapse {
             return 0
         }
-        return actorHeader[section].actor.films?.count ?? 0
+        return actorHeader[section].actor.films.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ListActorTableController.indentifier, for: indexPath)  as! FilmTableViewCell
-        cell.configure(whiteFilm: actorHeader[indexPath.section].actor.films?[indexPath.row])
+        cell.configure(whiteFilm: actorHeader[indexPath.section].actor.films[indexPath.row])
         return cell
     }
     
@@ -112,7 +125,7 @@ extension ListActorTableController: UITableViewDelegate {
     @objc
     private func handleExpandClose(_ button: UIButton) {
         let section = button.tag
-        guard let films = data.actorAt(index: section).films else { return }
+        let films = data.actorAt(index: section).films
         
         let header = viewSource.tableView.headerView(forSection: section) as! ActorHeader
         
@@ -136,7 +149,7 @@ extension ListActorTableController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        guard let film = actorHeader[indexPath.section].actor.films?[indexPath.row] else { return }
+        let film = actorHeader[indexPath.section].actor.films[indexPath.row]
         viewSource.didSelectFilm(film)
     }
 }

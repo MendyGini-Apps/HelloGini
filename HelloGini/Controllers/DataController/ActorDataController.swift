@@ -33,7 +33,7 @@ extension ActorDataController: ActorDataControllerProtocol {
     }
     
     var items: [Film] {
-        return actor.films ?? []
+        return actor.films
     }
     
     var count: Int {

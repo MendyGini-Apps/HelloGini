@@ -25,17 +25,11 @@ class FilmDataController {
     
     init(film: Film, delegate: FilmDataControllerDelegate) {
         self._film = film
-        self._film.actors = [Actor]()
         
-        if let urls = film.actorsUrl?.urls {
-            DownloadManager<Actor>(urls: urls, completion: { (actor, index) in
-                self._film.actors?.append(actor)
-                delegate.filmDownloaded()
-            }, finished: {
-                delegate.downloadFinished()
-            }).resume()
+        FilmRequest.getActorsFrom(film: film) { (actor, index, film) in
+            self._film.actors[index] = actor
+            delegate.filmDownloaded()
         }
-        
     }
     
 }
@@ -46,11 +40,11 @@ extension FilmDataController: FilmDataControllerProtocol {
         return _film
     }
     var count: Int {
-        return film.actors?.count ?? 0
+        return film.actors.count
     }
     
     func actorAt(_ index: Int) -> Actor? {
         guard index < count && index >= 0 else { return nil }
-        return film.actors?[index]
+        return film.actors[index]
     }
 }

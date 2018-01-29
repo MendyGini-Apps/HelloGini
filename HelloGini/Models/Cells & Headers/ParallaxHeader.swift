@@ -30,7 +30,7 @@ class ParallaxHeader: UITableViewHeaderFooterView {
         genderLabel.text = actor.gender
         heightLabel.text = actor.height
         
-        portraitImageView.image = UIImage(named: actor.name ?? "") ?? #imageLiteral(resourceName: "noImage")
+        portraitImageView.image = UIImage(named: actor.name) ?? #imageLiteral(resourceName: "noImage")
     }
     
     

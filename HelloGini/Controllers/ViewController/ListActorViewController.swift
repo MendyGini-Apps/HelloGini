@@ -26,13 +26,17 @@ class ListActorViewController: UIViewController {
         }
     }
     
-    private var tableController: TableControllerProtocol!    
+    private var tableController: ListActorTableControllerProtocol!
 }
 
 
 // MARK: - List Actor DataController Delegate
 extension ListActorViewController: ListActorDataControllerDelegate {
-    func downloadFinished() {
+    func downloaded(film: Film, atIndex index: Int, OfActor actor: Actor) {
+        tableController.refresh(section: index, withFilm: film)
+    }
+    
+    func downloadActorFinished() {
         indicator.stopAnimating()
         actorsTableView.isHidden = false
         tableController.refreshData()

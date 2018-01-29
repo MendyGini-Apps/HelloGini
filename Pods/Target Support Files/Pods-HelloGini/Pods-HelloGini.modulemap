@@ -1,0 +1,6 @@
+framework module Pods_HelloGini {
+  umbrella header "Pods-HelloGini-umbrella.h"
+
+  export *
+  module * { export * }
+}

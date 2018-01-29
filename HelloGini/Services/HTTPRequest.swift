@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Alamofire
 
 class HTTPRequest {
     private let baseUrl = "https://swapi.co/api/"
@@ -21,23 +22,21 @@ class HTTPRequest {
         self.url = url
     }
     
-    func fetchResult(completion: @escaping (_ data: Data?, _ error: Error?)->Void) {
+    func fetchResult(completion: @escaping (_ json: [String:Any]?, _ response: HTTPURLResponse?, _ error: Error?)->Void) {
         
-        URLSession.shared.dataTask(with: url) { (data, response, error) in
-            
-            if let error = error {
-                completion(nil, error)
-                return
-            }
-        
-            guard let data = data else {
+        Alamofire.request(url).responseJSON { (response) in
+            if case let .failure(error) = response.result {
+                completion(nil, response.response, error)
                 return
             }
             
-            completion(data, nil)
+            guard case let .success(result) = response.result,
+                let value = result as? [String:Any] else {
+                return
+            }
             
-        }.resume()
-        
-        
+            completion(value, response.response, nil)
+            
+        }
     }
 }

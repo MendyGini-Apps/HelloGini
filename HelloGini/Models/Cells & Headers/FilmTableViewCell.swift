@@ -18,14 +18,14 @@ class FilmTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var indicator: UIActivityIndicatorView!
     
-    func configure(whiteFilm film: Film?) {
-        if let film = film {
+    func configure(whiteFilm film: Film) {
+        if film.isDefaultValue {
+            titleLabel.isHidden = true
+            indicator.isHidden = false
+        } else {
             titleLabel.isHidden = false
             indicator.stopAnimating()
             titleLabel.text = film.title
-        } else {
-            titleLabel.isHidden = true
-            indicator.isHidden = false
         }
     }
     

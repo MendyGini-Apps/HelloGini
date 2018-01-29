@@ -36,7 +36,6 @@ class ActorViewController: UIViewController {
     
 }
 
-extension ActorTableControllerViewSource
 extension ActorViewController: ActorTableControllerViewSource {
     var tableView: UITableView {
         return detailsFilmTableView

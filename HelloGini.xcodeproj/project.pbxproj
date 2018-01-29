@@ -20,7 +20,6 @@
 		7B790B492019F8C2003CAAB3 /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B790B482019F8C2003CAAB3 /* Film.swift */; };
 		7B790B4F2019F95B003CAAB3 /* Array+urls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B790B4D2019F95B003CAAB3 /* Array+urls.swift */; };
 		7B790B502019F95B003CAAB3 /* UIViewController+showErrorMsg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B790B4E2019F95B003CAAB3 /* UIViewController+showErrorMsg.swift */; };
-		7B790B552019F96D003CAAB3 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B790B522019F96C003CAAB3 /* DownloadManager.swift */; };
 		7B790B562019F96D003CAAB3 /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B790B532019F96C003CAAB3 /* HTTPRequest.swift */; };
 		7B790B572019F96D003CAAB3 /* ActorsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B790B542019F96C003CAAB3 /* ActorsRequest.swift */; };
 		7B790B5D2019FACE003CAAB3 /* ListActorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B790B5C2019FACE003CAAB3 /* ListActorViewController.swift */; };
@@ -37,9 +36,13 @@
 		7B790B7A201A1961003CAAB3 /* ParallaxHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B790B79201A1961003CAAB3 /* ParallaxHeader.xib */; };
 		7B790B7C201A1E53003CAAB3 /* ListActorTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B790B7B201A1E53003CAAB3 /* ListActorTableController.swift */; };
 		7B790B80201A37AA003CAAB3 /* ListActorDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B790B7F201A37AA003CAAB3 /* ListActorDataController.swift */; };
+		7BD23969201F70EC00934868 /* FilmsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD23968201F70EC00934868 /* FilmsRequest.swift */; };
+		E9D9D6C650982BDB07118741 /* Pods_HelloGini.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE225E8C7A028B7E6E0AAB58 /* Pods_HelloGini.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4AE74368D721BA5E69D197FB /* Pods-HelloGini.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloGini.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HelloGini/Pods-HelloGini.debug.xcconfig"; sourceTree = "<group>"; };
+		713C2304BDDD0A139D2A4F30 /* Pods-HelloGini.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloGini.release.xcconfig"; path = "Pods/Target Support Files/Pods-HelloGini/Pods-HelloGini.release.xcconfig"; sourceTree = "<group>"; };
 		7B14D6F3201DDDBD006B605A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ActorHeader.xib; sourceTree = "<group>"; };
 		7B14D6F5201DFA0B006B605A /* ActorTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorTableController.swift; sourceTree = "<group>"; };
 		7B14D6F7201DFCDA006B605A /* ActorDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorDataController.swift; sourceTree = "<group>"; };
@@ -55,7 +58,6 @@
 		7B790B482019F8C2003CAAB3 /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
 		7B790B4D2019F95B003CAAB3 /* Array+urls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+urls.swift"; sourceTree = "<group>"; };
 		7B790B4E2019F95B003CAAB3 /* UIViewController+showErrorMsg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+showErrorMsg.swift"; sourceTree = "<group>"; };
-		7B790B522019F96C003CAAB3 /* DownloadManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
 		7B790B532019F96C003CAAB3 /* HTTPRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
 		7B790B542019F96C003CAAB3 /* ActorsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActorsRequest.swift; sourceTree = "<group>"; };
 		7B790B5C2019FACE003CAAB3 /* ListActorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListActorViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +74,8 @@
 		7B790B79201A1961003CAAB3 /* ParallaxHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParallaxHeader.xib; sourceTree = "<group>"; };
 		7B790B7B201A1E53003CAAB3 /* ListActorTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListActorTableController.swift; sourceTree = "<group>"; };
 		7B790B7F201A37AA003CAAB3 /* ListActorDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListActorDataController.swift; sourceTree = "<group>"; };
+		7BD23968201F70EC00934868 /* FilmsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsRequest.swift; sourceTree = "<group>"; };
+		BE225E8C7A028B7E6E0AAB58 /* Pods_HelloGini.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloGini.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9D9D6C650982BDB07118741 /* Pods_HelloGini.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +95,8 @@
 			children = (
 				7B790B322019F858003CAAB3 /* HelloGini */,
 				7B790B312019F858003CAAB3 /* Products */,
+				A7BD82B3517860CD9965C84F /* Pods */,
+				93DE1C334F97A78C8400572C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -138,9 +145,9 @@
 		7B790B512019F96C003CAAB3 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				7B790B522019F96C003CAAB3 /* DownloadManager.swift */,
 				7B790B532019F96C003CAAB3 /* HTTPRequest.swift */,
 				7B790B542019F96C003CAAB3 /* ActorsRequest.swift */,
+				7BD23968201F70EC00934868 /* FilmsRequest.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -220,6 +227,23 @@
 			path = "Cells & Headers";
 			sourceTree = "<group>";
 		};
+		93DE1C334F97A78C8400572C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BE225E8C7A028B7E6E0AAB58 /* Pods_HelloGini.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A7BD82B3517860CD9965C84F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4AE74368D721BA5E69D197FB /* Pods-HelloGini.debug.xcconfig */,
+				713C2304BDDD0A139D2A4F30 /* Pods-HelloGini.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -227,9 +251,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7B790B422019F858003CAAB3 /* Build configuration list for PBXNativeTarget "HelloGini" */;
 			buildPhases = (
+				78A9802692409941031BDA6F /* [CP] Check Pods Manifest.lock */,
 				7B790B2C2019F858003CAAB3 /* Sources */,
 				7B790B2D2019F858003CAAB3 /* Frameworks */,
 				7B790B2E2019F858003CAAB3 /* Resources */,
+				BDF6EE2218FECB2762CEDFAA /* [CP] Embed Pods Frameworks */,
+				EBE9D531C7A625742E61A1C8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -292,6 +319,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		78A9802692409941031BDA6F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HelloGini-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BDF6EE2218FECB2762CEDFAA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HelloGini/Pods-HelloGini-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HelloGini/Pods-HelloGini-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EBE9D531C7A625742E61A1C8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HelloGini/Pods-HelloGini-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7B790B2C2019F858003CAAB3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -300,9 +381,9 @@
 				7B790B342019F858003CAAB3 /* AppDelegate.swift in Sources */,
 				7B790B632019FB4B003CAAB3 /* FilmViewController.swift in Sources */,
 				7B14D6F6201DFA0B006B605A /* ActorTableController.swift in Sources */,
-				7B790B552019F96D003CAAB3 /* DownloadManager.swift in Sources */,
 				7B790B492019F8C2003CAAB3 /* Film.swift in Sources */,
 				7B790B462019F897003CAAB3 /* Actor.swift in Sources */,
+				7BD23969201F70EC00934868 /* FilmsRequest.swift in Sources */,
 				7B790B572019F96D003CAAB3 /* ActorsRequest.swift in Sources */,
 				7B790B72201A0166003CAAB3 /* DetailsFilmCell.swift in Sources */,
 				7B790B562019F96D003CAAB3 /* HTTPRequest.swift in Sources */,
@@ -461,6 +542,7 @@
 		};
 		7B790B432019F858003CAAB3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AE74368D721BA5E69D197FB /* Pods-HelloGini.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -476,6 +558,7 @@
 		};
 		7B790B442019F858003CAAB3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 713C2304BDDD0A139D2A4F30 /* Pods-HelloGini.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
