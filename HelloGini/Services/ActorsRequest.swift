@@ -16,7 +16,7 @@ class ActorsRequest {
     func getActors(completion: @escaping (_ actors: [Actor]?, _ error: Error?) -> Void) {
         guard let request = HTTPRequest(path: path) else { return }
         
-        request.fetchResult(completion: { (json, response, error) in
+        request.fetchResult(completion: { (json, _, error) in
             if let error = error {
                 completion(nil, error)
                 return
@@ -31,7 +31,7 @@ class ActorsRequest {
         })
     }
     
-    class func getFilmsFrom(actor: Actor, completion: @escaping (_ film: Film, _ inIndex: Int, _ ofActor: Actor) -> Void) {
+    class func getFilmsFrom(actor: Actor, completion: @escaping (_ film: Film, _ ofActor: Actor) -> Void) {
         
         var actor = actor
         
@@ -48,7 +48,7 @@ class ActorsRequest {
                 
                 let film = Film(json: json)
                 actor.insert(film: film, at: index)
-                completion(film,index,actor)
+                completion(film,actor)
             })
         }
     }

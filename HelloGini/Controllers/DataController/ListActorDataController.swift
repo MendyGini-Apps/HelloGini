@@ -41,7 +41,7 @@ class ListActorDataController {
     
     private func downloadFilmsOfActor() {
         for actor in actors {
-            ActorsRequest.getFilmsFrom(actor: actor, completion: { (film, index, actor)   in
+            ActorsRequest.getFilmsFrom(actor: actor, completion: { (film, actor)   in
                 if let index = self.actors.index(of: actor) {
                     self.actors[index] = actor
                     self.delegate?.downloaded(film: film, atIndex: index, OfActor: actor)
@@ -52,7 +52,7 @@ class ListActorDataController {
     
 }
 
-// MARK: - ListActor    taControllerProtocol
+// MARK: - ListActorDataControllerProtocol
 extension ListActorDataController: ListActorDataControllerProtocol {
     func actorAt(index: Int) -> Actor {
         return items[index]

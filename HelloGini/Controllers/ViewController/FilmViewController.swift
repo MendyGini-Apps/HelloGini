@@ -46,8 +46,6 @@ extension FilmViewController: FilmTableControllerViewSource {
     var tableView: UITableView {
         return filmsTableView
     }
-    
-    
 }
 
 // MARK: - FilmDataControllerDelegate

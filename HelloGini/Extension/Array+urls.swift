@@ -33,17 +33,3 @@ extension Array where Element == Actor {
     }
 }
 
-//extension Array where Element == Actor {
-//    var filmsUrl: [URL]? {
-//        var filmsUrl = [URL]()
-//        
-//        self.forEach{
-//            if let filmStr let url = URL(string: $0.filmsStr) {
-//                filmsUrl.append(url)
-//            }
-//        }
-//        
-//        return filmsUrl
-//    }
-//}
-
